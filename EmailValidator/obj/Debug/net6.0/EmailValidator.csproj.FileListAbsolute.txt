@@ -1,0 +1,15 @@
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\bin\Debug\net6.0\EmailValidator.deps.json
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\bin\Debug\net6.0\EmailValidator.dll
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\bin\Debug\net6.0\EmailValidator.pdb
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\bin\Debug\net6.0\CredentialMangementModels.dll
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\bin\Debug\net6.0\CredentialMangementModels.pdb
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.csproj.CopyComplete
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.dll
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\refint\EmailValidator.dll
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\EmailValidator.pdb
+C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\EmailValidator\obj\Debug\net6.0\ref\EmailValidator.dll

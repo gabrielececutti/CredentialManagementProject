@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EmailValidator/1.0.0": {
+        "dependencies": {
+          "CredentialMangementModels": "1.0.0"
+        },
+        "runtime": {
+          "EmailValidator.dll": {}
+        }
+      },
+      "CredentialMangementModels/1.0.0": {
+        "runtime": {
+          "CredentialMangementModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmailValidator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CredentialMangementModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
