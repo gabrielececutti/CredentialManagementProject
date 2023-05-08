@@ -21,9 +21,8 @@ namespace CredentialMangementConsoleApp.IOC
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, service) =>
                 {
-                    service.AddSingleton<AccountFactory>(new AccountFactory(new Faker<Account>()));
-
-                    string fileName = @"C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialMangementConsoleApp\AppSettings.json";
+                    service.AddSingleton(new AccountFactory(new Faker<Account>()));
+                    string fileName = @"AppSettings.json";
                     string json = File.ReadAllText(fileName);
                     AppSettings? appSettings = JsonConvert.DeserializeObject<AppSettings>(json);
                     service.AddSingleton(appSettings);
@@ -34,16 +33,7 @@ namespace CredentialMangementConsoleApp.IOC
                     service.AddSingleton<IAccountPersistenceServiceDb, AccountPersistenceServiceDb>();
                     service.AddSingleton<IAccountPersistenceServiceFile>(new AccountPersistenceServiceFile(appSettings.DownloadFolderPaths.MyPath));
 
-                    var validatorLength = new LengthValidator();
-                    var validatorDigit = new DigitValidator();
-                    var upperValidator = new UpperCaseValidator();
-                    var specialValidator = new SpecialCharValidator();
-
-                    validatorLength.SetSuccessor(validatorDigit);
-                    validatorDigit.SetSuccessor(upperValidator);
-                    upperValidator.SetSuccessor(specialValidator);
-
-                    service.AddSingleton<IPasswordValidator>(validatorLength);
+                    service.AddSingleton(SetUpPasswordChain.SetUpChain());
 
                     service.AddSingleton<IEmailValidator>(new EmailValidator(appSettings.EmailPattern));
 

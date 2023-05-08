@@ -20,7 +20,7 @@ namespace CredentialMangementConsoleApp
         public Account Create()
         {
             return _faker
-                .RuleFor(a => a.Number, f => f.Random.Number(1, 1000)) // eccezione sql se lo stesso, random = new Random(DateTime.Now.Millisecond);
+                .RuleFor(a => a.Number, f => f.Random.Number(1, 1000))
                 .RuleFor(a => a.Username, f => f.Internet.Email())
                 .RuleFor(a => a.Password, f => f.PickRandom(passwords))
                 .RuleFor(a => a.Date, f => DateTime.Now)

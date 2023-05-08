@@ -28,7 +28,7 @@ namespace CredentialMangementConsoleApp
 
         public void Run ()
         {
-            Console.WriteLine("Press something to start the program");
+            Console.WriteLine("Press enter to start the program");
             var x = Console.ReadLine(); 
             Console.WriteLine("Strat Program...");
             Thread.Sleep(1000);
@@ -47,7 +47,7 @@ namespace CredentialMangementConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("incorrect credentials: ");
+                    Console.WriteLine("errors: ");
                     foreach (var e in logResponse.Errors) if (!string.IsNullOrEmpty(e)) Console.WriteLine(e);
                 }
             }

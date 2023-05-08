@@ -21,7 +21,6 @@ using System.Text.Json;
 using Validators.EmailValidator;
 using Validators.PasswordValidator;
 
-// rivedere gestione eccezioni ed errori
 // uso di IOC e Json
 // codice asincrono
 
@@ -34,4 +33,3 @@ var accountFactory = host.Services.GetRequiredService<AccountFactory>();
 
 var app = new App (appSettings, loggingService, printerService, accountFactory);
 app.Run();
- 

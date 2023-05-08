@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,7 +76,7 @@ namespace CredentialManagementData.Repository
                     result.Data = account;
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 result.Errors.Add(ex.Message);
             }
@@ -93,10 +94,10 @@ namespace CredentialManagementData.Repository
                 var sqlParameters = parameters.Select(x => new SqlParameter(x.Key, x.Value)).ToArray();
                 command.Parameters.AddRange(sqlParameters);
                 response.Data = command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
+            }catch (SqlException ex)
             {
-                response.Errors.Add(ex.Message);
+                if (ex.Number == 2627) response.Errors.Add("account already exist.");
+                else response.Errors.Add(ex.Message);
             }
             return response;
         }
