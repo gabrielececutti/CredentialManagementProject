@@ -13,3 +13,18 @@ C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\CredentialManagemen
 C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\refint\Validators.dll
 C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.pdb
 C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\ref\Validators.dll
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\bin\Debug\net6.0\Validators.deps.json
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\bin\Debug\net6.0\Validators.dll
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\bin\Debug\net6.0\Validators.pdb
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\bin\Debug\net6.0\CredentialMangementModels.dll
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\bin\Debug\net6.0\CredentialMangementModels.pdb
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.csproj.CopyComplete
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.dll
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\refint\Validators.dll
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\Validators.pdb
+C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialManagement\Validators\obj\Debug\net6.0\ref\Validators.dll

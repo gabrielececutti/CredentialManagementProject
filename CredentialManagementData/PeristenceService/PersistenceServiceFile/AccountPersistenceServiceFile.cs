@@ -20,18 +20,15 @@ namespace CredentialManagementData.PeristenceService
             _basePath = basePath;
         }
 
-        public DefaultResponse<bool> Write(Account account)
+        public DefaultResponse<string> Write(Account account)
         {
-            var response = new DefaultResponse<bool>();
-            var filePathBuilder = new FilePathBuilder(_basePath, account);
-            var path = filePathBuilder.GetFilePath();
-            var writer = new StreamWriter(path);
+            var response = new DefaultResponse<string>();
+            var path = FilePathBuilder.GetFilePath(_basePath, account);
+            var logger = $"{Heading}{Environment.NewLine}{CsvAccountConverter.Convert(account)}";
             try
             {
-                var logger = $"{Heading}{Environment.NewLine}{CsvAccountConverter.Convert(account)}";
-                writer.WriteLine(logger);
-                writer.Dispose();
-                response.Data = true;
+                File.WriteAllText(path, logger);
+                response.Data = path;
             }catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZMbk7qTjxUiAPW2VJjwMpQWJrGym8r13iXt1c/Yp/yNgxoycNa8KF4rK+aMKbv2U/DarzvLNZcnZYVJOyz8KfQ==",
+  "dgSpecHash": "ySxJ4pS2moaUt0PAX8vfikm/HeDt3xMRGfj+UrNmcgAB+gfveVPKZjMkk30OaI9i/9GP6rgHRB5A7wp9i8bceg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

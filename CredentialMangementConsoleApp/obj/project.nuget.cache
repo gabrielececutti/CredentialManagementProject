@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yC6+HFokKH04QL77ym8v+1wH53n7tZ4+g955Q+ffi5kcwFYbSLVYlGm+hjx+jLv8m7K20n4tWpzyIgoaYHfgKg==",
+  "dgSpecHash": "ZnD8iadjj3nWuML2tiXmoIB9e0Rso2H4T61mZSGWk5XBN5WRbnbsN/0KvAwAPjjFMQThXiGNjAiK6r8RhnmiLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

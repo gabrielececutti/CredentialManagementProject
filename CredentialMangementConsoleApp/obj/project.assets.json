@@ -2196,11 +2196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
       "projectName": "CredentialMangementConsoleApp",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangementConsoleApp\\CredentialMangementConsoleApp.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangementConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangementConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2221,14 +2221,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialManagementData\\CredentialManagementData.csproj": {
-              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialManagementData\\CredentialManagementData.csproj"
+            "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialManagementData\\CredentialManagementData.csproj": {
+              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialManagementData\\CredentialManagementData.csproj"
             },
-            "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialManagement\\Validators\\Validators.csproj": {
-              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialManagement\\Validators\\Validators.csproj"
+            "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialManagement\\Validators\\Validators.csproj": {
+              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialManagement\\Validators\\Validators.csproj"
             },
-            "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj": {
-              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj"
+            "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj": {
+              "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Academy C#NET\\ProgettiPersonali\\Credential ManagementProject\\CredentialMangamentPeristenceService\\CredentialMangamentServices.csproj"
             }
           }
         }
@@ -2272,7 +2272,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

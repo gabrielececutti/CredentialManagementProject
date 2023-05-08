@@ -23,7 +23,7 @@ namespace CredentialMangementConsoleApp.IOC
                 {
                     service.AddSingleton<AccountFactory>(new AccountFactory(new Faker<Account>()));
 
-                    string fileName = @"C:\Users\gabri\OneDrive\Desktop\Credential ManagementProject\CredentialMangementConsoleApp\AppSettings.json";
+                    string fileName = @"C:\Users\gabri\OneDrive\Desktop\Academy C#NET\ProgettiPersonali\Credential ManagementProject\CredentialMangementConsoleApp\AppSettings.json";
                     string json = File.ReadAllText(fileName);
                     AppSettings? appSettings = JsonConvert.DeserializeObject<AppSettings>(json);
                     service.AddSingleton(appSettings);

@@ -10,6 +10,6 @@ namespace CredentialManagementData.PeristenceService
 {
     public interface IAccountPersistenceServiceFile
     {
-        public DefaultResponse<bool> Write(Account account);
+        public DefaultResponse<string> Write(Account account);
     }
 }

@@ -2,6 +2,7 @@
 using CredentialMangamentServices.PrinterService;
 using CredentialMangementModels.Entities;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace CredentialMangementConsoleApp
 
         public void Run ()
         {
+            Console.WriteLine("Press something to start the program");
+            var x = Console.ReadLine(); 
             Console.WriteLine("Strat Program...");
             Thread.Sleep(1000);
             Console.WriteLine("-----------------------------------LOG-----------------------------------");
@@ -53,12 +56,21 @@ namespace CredentialMangementConsoleApp
             {
                 var printResponse = _printerService.PrintAccount(account.Number, account.Password);
                 Thread.Sleep(1000);
-                if (printResponse.Data)
+                if (printResponse.Data != null)
                 {
                     Console.WriteLine($"account downloaded in {_appSettings.DownloadFolderPaths.MyPath}");
                     Console.WriteLine("do you want to download the file again? (Y|N)");
                     var userAnswer = Console.ReadLine();
-                    if (userAnswer.Equals("Y")) Console.WriteLine("not implemented");          
+                    if (userAnswer.Equals("Y"))
+                    {
+                        var printCopyResponse = _printerService.PrintCopyAccount(printResponse.Data);
+                        if (printCopyResponse.Data) Console.WriteLine("file copy downloaded successfully");
+                        else
+                        {
+                            Console.WriteLine("errors while dowloading the file copy");
+                            printResponse.Errors.ForEach(e => Console.WriteLine(e));
+                        }
+                    }          
                     break;
                 }
                 else

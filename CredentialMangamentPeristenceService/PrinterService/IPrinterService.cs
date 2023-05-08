@@ -10,6 +10,7 @@ namespace CredentialMangamentServices.PrinterService
 {
     public interface IPrinterService
     {
-        public DefaultResponse<bool> PrintAccount(int numbers, string password);
+        public DefaultResponse<string> PrintAccount(int numbers, string password);
+        public DefaultResponse<bool> PrintCopyAccount(string fileName);
     }
 }

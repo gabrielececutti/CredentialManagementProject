@@ -8,20 +8,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace CredentialManagementData.FileWorking
 {
-    public class FilePathBuilder
+    public static class FilePathBuilder
     {
-        private readonly string _folderBasePath;
-        private readonly Account _account;
-
-        public FilePathBuilder(string folderBasePath, Account account)
+        public static string GetFilePath(string _folderBasePath, Account account)
         {
-            _folderBasePath = folderBasePath;
-            _account= account;
-        }
-
-        public string GetFilePath()
-        {
-            var fileName = $"{_account.Number}-{_account.Date.Year}-{_account.Date.Month}-{_account.Date.Day}";
+            var fileName = $"{account.Number}-{account.Date.Year}-{account.Date.Month}-{account.Date.Day}";
             return Path.Combine(_folderBasePath, fileName);
         }
     }
