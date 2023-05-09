@@ -1,6 +1,7 @@
 ﻿using CredentialManagementData.PeristenceService;
 using CredentialMangamentServices.PeristenceService;
 using CredentialMangementModels.Entities;
+using CredentialMangementModels.Requests;
 using CredentialMangementModels.Requests.AccountRequests;
 using CredentialMangementModels.Response;
 
@@ -17,36 +18,35 @@ namespace CredentialMangamentServices.PrinterService
             _accountPersistenceServiceDb = accountPersistenceServiceDb;
         }
 
-        public DefaultResponse<string> PrintAccount(int number, string password)
+        public DefaultResponse<string> PrintAccount(AccountByUsernamePasswordRequest userInput)
         {
             var response = new DefaultResponse<string>();
-            var dbResponse = _accountPersistenceServiceDb.GetAccountById(new AccountByIdRequest { Id = number });
+            var dbResponse = _accountPersistenceServiceDb.GetAccountByUsernameAndPassword(userInput);
             if (dbResponse.Data!= null) 
             {
                 var printerResponse = _accountPeristenceServiceFile.Write(dbResponse.Data);
-                if (printerResponse.Data != null) response.Data = printerResponse.Data;
-                else response.Errors = printerResponse.Errors;
-            }else 
+                if (!string.IsNullOrEmpty(printerResponse)) response.Data = printerResponse;
+                else response.Error = "unable to print the file";
+            }
+            else 
             {
-                response.Errors = dbResponse.Errors;
+                response.Error = "the account dose not exist";
             }
             return response;
         }
 
-        public DefaultResponse<bool> PrintCopyAccount(string fileName)
+        public bool PrintCopyAccount(string fileName)
         {
-            DefaultResponse<bool> response = new DefaultResponse<bool>();
             var copyFile = $"{fileName}.copy";
             try
             {   
                 File.Copy(fileName, copyFile);
-                response.Data = true;
             }
-            catch (Exception ex) 
+            catch (Exception) 
             {
-                response.Errors.Add(ex.Message);
+                return false;
             }
-            return response;
+            return true;
         }
     }
 }

@@ -11,7 +11,6 @@ namespace CredentialMangementConsoleApp
         public List<string>? exclude { get; set; }
         public ConnectionStrings? ConnectionStrings { get; set; }
         public DownloadFolderPaths? DownloadFolderPaths { get; set; }
-        public DownloadFolderCopiesPaths? DownloadFolderCopiesPaths { get; set; }
         public string? EmailPattern { get; set; }
     }
     public class ConnectionStrings
@@ -23,11 +22,4 @@ namespace CredentialMangementConsoleApp
     {
         public string? MyPath { get; set; }
     }
-
-    public class DownloadFolderCopiesPaths
-    {
-        public string? MyPath { get; set; }
-    }
-
-
 }

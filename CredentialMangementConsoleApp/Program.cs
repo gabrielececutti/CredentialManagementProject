@@ -14,6 +14,7 @@ using CredentialMangementConsoleApp.IOC;
 using CredentialMangementModels.Entities;
 using CredentialMangementModels.Requests.AccountRequests;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,7 +22,6 @@ using System.Text.Json;
 using Validators.EmailValidator;
 using Validators.PasswordValidator;
 
-// uso di IOC e Json
 // codice asincrono
 
 var host = Startup.CreateHostBuilder().Build();

@@ -1,6 +1,8 @@
 ﻿using CredentialMangamentServices.LoggerService;
 using CredentialMangamentServices.PrinterService;
 using CredentialMangementModels.Entities;
+using CredentialMangementModels.Requests;
+using CredentialMangementModels.Requests.AccountRequests;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -47,16 +49,17 @@ namespace CredentialMangementConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("errors: ");
-                    foreach (var e in logResponse.Errors) if (!string.IsNullOrEmpty(e)) Console.WriteLine(e);
+                    Console.WriteLine($"error: {logResponse.Error}");
                 }
             }
+
             Console.WriteLine("-----------------------------DOWNLOAD FILE-------------------------------");
+            var userInput = new AccountByUsernamePasswordRequest{ Username = account.Username, Password = account.Password};
             while (true)
             {
-                var printResponse = _printerService.PrintAccount(account.Number, account.Password);
+                var printResponse = _printerService.PrintAccount(userInput);
                 Thread.Sleep(1000);
-                if (printResponse.Data != null)
+                if (!string.IsNullOrEmpty(printResponse.Data))
                 {
                     Console.WriteLine($"account downloaded in {_appSettings.DownloadFolderPaths.MyPath}");
                     Console.WriteLine("do you want to download the file again? (Y|N)");
@@ -64,20 +67,14 @@ namespace CredentialMangementConsoleApp
                     if (userAnswer.Equals("Y"))
                     {
                         var printCopyResponse = _printerService.PrintCopyAccount(printResponse.Data);
-                        if (printCopyResponse.Data) Console.WriteLine("file copy downloaded successfully");
-                        else
-                        {
-                            Console.WriteLine("errors while dowloading the file copy");
-                            printResponse.Errors.ForEach(e => Console.WriteLine(e));
-                        }
+                        if (printCopyResponse) Console.WriteLine("file copy downloaded successfully");
+                        else Console.WriteLine("errors while dowloading the file copy");
                     }          
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("errors while downloading the file");
-                    printResponse.Errors.ForEach(e => Console.WriteLine(e));
-                    break;
+                    Console.WriteLine(printResponse.Error);
                 }
             }
             Console.WriteLine("End Program...");

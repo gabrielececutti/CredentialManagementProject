@@ -7,7 +7,7 @@ namespace CredentialMangamentServices.PeristenceService
 {
     public class AccountPersistenceServiceDb : IAccountPersistenceServiceDb
     {
-        private readonly IAccountRepository _accountReposistory;
+        private readonly IAccountRepository _accountReposistory; 
 
         public AccountPersistenceServiceDb(IAccountRepository accountReposistory)
         {
@@ -17,6 +17,11 @@ namespace CredentialMangamentServices.PeristenceService
         public DefaultResponse<Account> GetAccountById(AccountByIdRequest id)
         {
             return _accountReposistory.GetAccountById(id);
+        }
+
+        public DefaultResponse<Account> GetAccountByUsernameAndPassword(AccountByUsernamePasswordRequest accountByUsernamePasswordRequest)
+        {
+            return _accountReposistory.GetAccountByUsernameAndPassword(accountByUsernamePasswordRequest);
         }
 
         public DefaultResponse<bool> Insert(Account account)

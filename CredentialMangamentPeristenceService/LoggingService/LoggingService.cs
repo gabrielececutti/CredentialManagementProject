@@ -28,33 +28,27 @@ namespace CredentialMangamentServices.LoggerService
         {
             var logResponse = new DefaultResponse<int>();
 
-            var accountValidation = ExecuteValidation(account);
-            if (accountValidation.Data) 
-            {
-               var dbResponse = _accountPersistenceServiceDb.Insert(account);
-               if (dbResponse.Data) logResponse.Data = account.Number;
-               else logResponse.Errors = dbResponse.Errors;
-            }else
-            {
-                logResponse.Errors = accountValidation.Errors;
-            }
-            return logResponse;
-        }
-
-        private DefaultResponse<bool> ExecuteValidation (Account account)
-        {
-            var response = new DefaultResponse<bool>();
             var emailValidation = _emailValidator.IsValid(account.Username);
-            var passwordValidation = _passwordValidator.IsValid(account.Password);
-            if (emailValidation.Valid && passwordValidation.Valid)
+            if (!emailValidation.Valid)
             {
-                response.Data = true;
-            }else
-            {
-                response.Errors.Add(emailValidation.Error);
-                response.Errors.Add(passwordValidation.Error);
+                logResponse.Error = emailValidation.Error;
+                return logResponse;
             }
-            return response;
+
+            var passwordValidation = _passwordValidator.IsValid(account.Password);
+            if (!passwordValidation.Valid)
+            {
+                logResponse.Error = passwordValidation.Error;
+                return logResponse;
+            }
+
+            var dbResponse = _accountPersistenceServiceDb.Insert(account);
+            if (!dbResponse.Data)
+            {
+                logResponse.Error = dbResponse.Error;
+            }
+            logResponse.Data = account.Number;
+            return logResponse;
         }
     }
 }

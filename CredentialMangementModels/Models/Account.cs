@@ -2,7 +2,7 @@
 {
     public class Account
     {
-        public int Number { get; set; }
+        public int Number { get; init; }
         public string Username { get; init; }
         public string Password { get; init; }
         public DateTime Date { get; init; }

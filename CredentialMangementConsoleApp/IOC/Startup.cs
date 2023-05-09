@@ -41,6 +41,6 @@ namespace CredentialMangementConsoleApp.IOC
 
                     service.AddSingleton<IPrinterService, PrinterService>();
                 });
-        }
+        } 
     }
 }

@@ -9,6 +9,6 @@ namespace CredentialMangementModels.Response
     public class DefaultResponse<T>
     {
         public T? Data { get; set; }
-        public List<string>? Errors { get; set; } = new List<string>();
+        public string? Error { get; set; }
     }
 }

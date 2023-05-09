@@ -12,6 +12,7 @@ namespace CredentialManagementData.Repository
     public interface IAccountRepository
     {
         public DefaultResponse<Account> GetAccountById(AccountByIdRequest id);
+        public DefaultResponse<Account> GetAccountByUsernameAndPassword(AccountByUsernamePasswordRequest accountByUsernamePasswordRequest);
         public DefaultResponse<bool> Insert(Account account);
     }
 }

@@ -29,7 +29,22 @@ namespace CredentialManagementData.Repository
             return new DefaultResponse<Account>
             {
                 Data = response.Data,
-                Errors = response.Errors
+                Error = response.Error
+            };
+        }
+
+        public DefaultResponse<Account> GetAccountByUsernameAndPassword(AccountByUsernamePasswordRequest accountByUsernamePasswordRequest)
+        {
+            var query = "SELECT * FROM Account WHERE Username = @username AND Password = @password ";
+            var parameter = new Dictionary<string, object>() {
+                { "@username", accountByUsernamePasswordRequest.Username},
+                {"@password", accountByUsernamePasswordRequest.Password}
+            };
+            var response = GetAccount(query, parameter);
+            return new DefaultResponse<Account>
+            {
+                Data = response.Data,
+                Error = response.Error
             };
         }
 
@@ -49,7 +64,7 @@ namespace CredentialManagementData.Repository
             return new DefaultResponse<bool>
             {
                 Data = response.Data == 0 ? false : true,
-                Errors = response.Errors
+                Error = response.Error
             };
         }
 
@@ -78,7 +93,7 @@ namespace CredentialManagementData.Repository
             }
             catch (SqlException ex)
             {
-                result.Errors.Add(ex.Message);
+                result.Error = ex.Message;
             }
             return result;
         }
@@ -96,8 +111,8 @@ namespace CredentialManagementData.Repository
                 response.Data = command.ExecuteNonQuery();
             }catch (SqlException ex)
             {
-                if (ex.Number == 2627) response.Errors.Add("account already exist.");
-                else response.Errors.Add(ex.Message);
+                if (ex.Number == 2627) response.Error = "account already exist";
+                else response.Error = "errors in the db";
             }
             return response;
         }
